@@ -1,1 +1,1 @@
-print('hello world')
+echo HELLOOO

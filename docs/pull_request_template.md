@@ -4,23 +4,13 @@
 
 Please include a summary of the change and which issue is fixed. Please also include relevant motivation and context. List any dependencies that are required for this change.
 
-Fixes # (issue)
-
 ## Type of change
 
-- [ ] Bug fix or new feature
-- [ ] New Phantom App 
+- If this is a PR for a bug fix or new feature, add the "app update" label to this PR
+- If this is a PR for a new app, add the "new app" label to this PR
 
 ## Phantom App Name:
 
-## Checklist:
+Please include the name of the app you are making a PR for.
 
-- [ ] My code follows the style guidelines of this project
-- [ ] I have performed a self-review of my own code
-- [ ] I have commented my code, particularly in hard-to-understand areas
-- [ ] I have made corresponding changes to the documentation
-- [ ] My changes generate no new warnings
-- [ ] I have added tests that prove my fix is effective or that my feature works
-- [ ] New and existing unit tests pass locally with my changes
-- [ ] Any dependent changes have been merged and published in downstream modules
-- [ ] I have checked my code and corrected any misspellings
+## End Pull Request Template

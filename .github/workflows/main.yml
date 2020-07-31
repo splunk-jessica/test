@@ -29,6 +29,9 @@ jobs:
 
     # Runs a set of commands using the runners shell
     - name: Run a multi-line script
+      env: 
+        repo_owner: ${{ github.repository_owner }}
       run: |
         echo Add other actions to build,
         echo test, and deploy your project.
+        echo repo owner: "$repo-owner"

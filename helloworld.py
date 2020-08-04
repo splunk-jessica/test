@@ -1,8 +1,8 @@
 import sys
 from git import Repo
 
-repo = Repo('splunk-jessica/test')
-filename = 'splunk-jessica/test/helloworld.py'
+repo = Repo('test')
+filename = 'test/helloworld.py'
 diff_output = repo.git.diff(filename)
 print(diff_output)
 

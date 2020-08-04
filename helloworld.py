@@ -1,5 +1,4 @@
 import sys
-from createJira import *
 from git import Repo
 
 repo = Repo('splunk-jessica/test')

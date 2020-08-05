@@ -30,7 +30,7 @@ jobs:
 
     - name: Run test script
       run: |
-        output = $(python local/helloworld.py local/*.md)
+        output=$(python local/helloworld.py local/*.md)
         echo "::set-output name=test_output::$output"
       id: test
         

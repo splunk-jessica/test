@@ -27,13 +27,9 @@ jobs:
       with:
         ref: test-branch
         path: test
-    - name: Set up Python 3.8
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.8
+
     - name: Run test script
       run: |
-        pip install gitpython
         output = $(python local/helloworld.py local/*.md)
         echo "::set-output name=test_output::$output"
       id: test

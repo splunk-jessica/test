@@ -21,7 +21,7 @@ jobs:
       with:
         ref: test-branch
     - name: Get diff
-      run: git diff test-branch ${GITHUB_REF##*/}
+      run: git diff test-branch..${GITHUB_REF##*/}
     - name: Set up Python 3.8
       uses: actions/setup-python@v2
       with:

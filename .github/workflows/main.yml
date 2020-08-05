@@ -23,7 +23,7 @@ jobs:
         path: local
 
     - name: Checkout next branch
-      uses: ./
+      uses: actions/checkout@v2
       with:
         ref: test-branch
         path: test

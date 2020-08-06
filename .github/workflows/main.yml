@@ -43,6 +43,6 @@ jobs:
     - name: test
       run: |
         FOLDER_DIR=${{ steps.file_changes.outputs.files }}
-        FOLDER = ${FOLDER_DIR#*"}
+        FOLDER = ${FOLDER_DIR#*.github}
         echo FOLDER
-        echo ${FOLDER%%"*}
+        echo ${FOLDER%%,*}

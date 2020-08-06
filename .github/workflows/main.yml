@@ -45,12 +45,3 @@ jobs:
         folderDir=${{ steps.file_changes.outputs.files }}
         folderDir=${folderDir#*.github}
         echo ${folderDir%%/*}
-    - name: run test script
-      run: |
-        output=$(json.loads(${{ steps.file_changes.outputs.files}})[0])
-        echo "::set-output name=file_name::$output"
-      id: filename
-    - name: print output
-      run: |
-        echo This is the output:
-        echo "${{ steps.filename.outputs.file_name }}"

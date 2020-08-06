@@ -38,3 +38,11 @@ jobs:
       run: |
         echo This is the output:
         echo "${{ steps.test.outputs.test_output }}"
+    - id: file_changes
+      uses: trilom/file-changes-action@v1.2.3
+    - name: test
+      run: |
+          echo '${{ steps.file_changes.outputs.files}}'
+          echo '${{ steps.file_changes.outputs.files_modified}}'
+          echo '${{ steps.file_changes.outputs.files_added}}'
+          echo '${{ steps.file_changes.outputs.files_removed}}'

@@ -42,7 +42,9 @@ jobs:
       uses: trilom/file-changes-action@v1.2.3
     - name: test
       run: |
-          echo '${{ steps.file_changes.outputs.files[0]}}'
+          echo '${{ steps.file_changes.outputs.files}}'
           echo '${{ steps.file_changes.outputs.files_modified}}'
           echo '${{ steps.file_changes.outputs.files_added}}'
           echo '${{ steps.file_changes.outputs.files_removed}}'
+    - name: run test script
+      run: python local/.github/workflows/helloworld.py '${{ steps.file_changes.outputs.files}}'

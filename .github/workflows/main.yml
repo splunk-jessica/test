@@ -42,6 +42,5 @@ jobs:
       uses: trilom/file-changes-action@v1.2.3
     - name: test
       run: |
-        folderDir=${{ steps.file_changes.outputs.files }}
-        folderDir2=${folderDir#*.github}
-        echo ${folderDir2%%/*}
+        FOLDER_DIR=${{ steps.file_changes.outputs.files }}
+        echo ${FOLDER_DIR#*.github}

@@ -1,4 +1,6 @@
 import sys
+import json
 
-for i in sys.argv[1]:
+list = json.loads(sys.argv[1])
+for i in list:
   print(i)

@@ -48,7 +48,7 @@ jobs:
           echo '${{ steps.file_changes.outputs.files_removed}}'
     - name: run test script
       run: |
-        output=$(python local/.github/workflows/helloworld.py '${{ steps.file_changes.outputs.files}}')
+        output=$(json.loads(${{ steps.file_changes.outputs.files}})[0])
         echo "::set-output name=file_name::$output"
       id: filename
     - name: print output

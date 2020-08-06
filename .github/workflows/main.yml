@@ -47,4 +47,6 @@ jobs:
           echo '${{ steps.file_changes.outputs.files_added}}'
           echo '${{ steps.file_changes.outputs.files_removed}}'
     - name: run test script
-      run: python local/.github/workflows/helloworld.py '${{ steps.file_changes.outputs.files}}'
+      run: |
+        output=$(python helloworld.py '${{ steps.file_changes.outputs.files}}')
+        echo "::set-output name=file_name::$output"

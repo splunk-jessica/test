@@ -42,10 +42,8 @@ jobs:
       uses: trilom/file-changes-action@v1.2.3
     - name: test
       run: |
-          echo '${{ steps.file_changes.outputs.files}}'
-          echo '${{ steps.file_changes.outputs.files_modified}}'
-          echo '${{ steps.file_changes.outputs.files_added}}'
-          echo '${{ steps.file_changes.outputs.files_removed}}'
+        folderDir=${{ steps.file_changes.outputs.files#*.github }}
+        echo ${folderDir%%/*}
     - name: run test script
       run: |
         output=$(json.loads(${{ steps.file_changes.outputs.files}})[0])

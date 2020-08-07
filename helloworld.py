@@ -6,4 +6,5 @@ print(f.readline())
 
 arg = sys.argv[1]
 print('hello world')
-print(arg)
+if arg:
+  print('can access secret')

@@ -7,5 +7,3 @@ if JIRA(sys.argv[1]):
 else:
   print('cant access secret')
 print('hello world')
-if arg:
-  

@@ -27,4 +27,5 @@ jobs:
         TEAM_ID : ${{ secrets.APP_TEAM_ID }}
       run: |
         pip install gitpython
+        pip install jira
         python helloworld.py "$TEAM_ID"

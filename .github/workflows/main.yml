@@ -25,7 +25,7 @@ jobs:
     - name: Run test script
       run: |
         output1=$(python check.py)
-        output2="${output//'%'/'%25'}"
+        output2="${output1//'%'/'%25'}"
         echo "::set-env name=isAppUpdate::$output1"
         echo "::set-env name=isNewApp::$output2"
     

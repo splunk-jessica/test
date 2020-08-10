@@ -31,5 +31,5 @@ jobs:
     
     - name: Print env var
       run: |
-        echo ${{ isAppUpdate }}
-        echo ${{ isNewApp }}
+        echo ${{ env.isAppUpdate }}
+        echo ${{ env.isNewApp }}

@@ -23,9 +23,13 @@ jobs:
       with:
         python-version: 3.8
     - name: Run test script
-      env:
-        TEAM_ID : ${{ secrets.APP_TEAM_ID }}
       run: |
-        pip install gitpython
-        pip install jira
-        python helloworld.py "$TEAM_ID"
+        output1=$(python check.py)
+        output2="${output//'%'/'%25'}"
+        echo "::set-env name=isAppUpdate::$output1"
+        echo "::set-env name=isNewApp::$output2"
+    
+    - name: Print env var
+      run: |
+        echo ${{ isAppUpdate }}
+        echo ${{ isNewApp }}

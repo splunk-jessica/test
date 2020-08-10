@@ -25,4 +25,4 @@ jobs:
         
     - name: Set env var
       run: echo "::set-env name=isAppUpdate::${{ true }}"
-      if: contains(github.event.pusher, 'jessica')
+      if: contains(github.event.pusher.name, 'jessica')
